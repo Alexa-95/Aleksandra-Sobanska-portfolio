@@ -1,0 +1,187 @@
+.section-skills{
+    width: 100%;
+    height: fit-content;
+    position: relative;
+
+    .skills{
+        height: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        @include max-breakpoint (1000px){
+            flex-direction: column;
+        }
+        h1{
+            color: $main-color;
+            font-family: $font-main;
+            font-size: 44px;
+            text-align: center;
+
+            @include max-breakpoint($point3){
+              font-size: 32px;
+          }
+        }
+
+        .skills_dev{
+            width: 45%;
+            margin: 5% auto;
+            height: 100%;
+            background-color: $color-gray-light;
+            padding: 20px;
+            border-radius: 40px;
+
+            @include max-breakpoint (1000px){
+                width: 80%;
+                height: fit-content;
+            }
+
+            &--item{
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                height: fit-content;
+                padding: 20px;
+
+                @include max-breakpoint ($point3){
+                    display: flex;
+                    flex-direction: column;
+                    padding: 10px;
+                }
+
+                img{
+                    width: 100px;
+                    height: auto;
+
+                    @include max-breakpoint (1000px){
+                        width: 60px;
+                    }
+                }
+
+                h2{
+                    position: absolute;
+                    top: 0;
+                    left: 140px;
+
+                    @include max-breakpoint($point3){
+                      position: unset;
+                  }
+                }
+
+                .bar{
+                    background-color: #f2efef;
+                    width: calc(100% - 100px - 40px);
+                    height: 30px;
+                    margin: 0 auto;
+
+                    @include max-breakpoint ($point1){
+                        height: 25px;
+                        margin: 0 0 0 auto;
+                        width: calc(100% - 100px);
+                    }     
+                    
+                    @include max-breakpoint ($point3){
+                        width: 100%;
+                        margin: 20px auto;
+                    }
+
+                    .progressbar {
+                        background: linear-gradient(
+                          135deg,
+                          $main-color-dark 25%, $main-color-light 25%,
+                              $main-color-light 50%, $main-color-dark 50%,
+                              $main-color-dark 75%, $main-color-light 75%
+                        );
+                        background: -webkit-linear-gradient(
+                          135deg,
+                          $main-color-dark 25%, $main-color-light 25%,
+                              $main-color-light 50%, $main-color-dark 50%,
+                              $main-color-dark 75%, $main-color-light 75%
+                        );
+                        
+                        background: -moz-linear-gradient(
+                          135deg,
+                          $main-color-dark 25%, $main-color-light 25%,
+                              $main-color-light 50%, $main-color-dark 50%,
+                              $main-color-dark 75%, $main-color-light 75%
+                        );
+                        
+                        background: -o-linear-gradient(
+                          135deg,
+                          $main-color-dark 25%, $main-color-light 25%,
+                              $main-color-light 50%, $main-color-dark 50%,
+                              $main-color-dark 75%, $main-color-light 75%
+                        );
+                        animation: bar-animation 3s linear infinite;
+                        -webkit-animation: bar-animation 3s linear infinite; 
+                        width: 50%;
+                        height: 30px;
+                        background-size: 50px 50px;
+                        
+                        @include max-breakpoint ($point1){
+                            height: 25px;
+                        }
+
+                        &.html{
+                          width: 90%;
+                        }
+                        &.css{
+                          width: 85%;
+                        }
+                        &.sass{
+                          width: 85%;
+                        }
+                        &.js{
+                          width: 60%;
+                        }
+                        &.react{
+                          width: 20%;
+                        }
+                        &.ps{
+                          width: 90%;
+                        }
+                        &.ai{
+                          width: 80%;
+                        }
+                        &.id{
+                          width: 80%;
+                        }
+                        &.ui{
+                          width: 60%;
+                        }
+                        &.dtp{
+                          width: 60%;
+                        }
+                      }
+                  }
+
+            }
+        }
+
+        
+    }
+}
+
+  
+
+  
+  
+  @keyframes bar-animation {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 50px 50px;
+    }
+  }
+  @-webkit-keyframes bar-animation {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 50px 50px;
+    }
+  }

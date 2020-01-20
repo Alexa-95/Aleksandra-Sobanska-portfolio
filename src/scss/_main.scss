@@ -1,0 +1,91 @@
+html {
+  font-size: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  scrollbar-color: $main-color-dark $color-gray;
+}
+
+body {
+  font-family: $font-main;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  width: 100%;
+  overflow-x: hidden;
+  color: $color-black;
+  padding-top: 0px;
+  background: $color-bg-light;
+}
+
+scrollbar {
+  width: 10px;
+  background: rgba(119, 119, 119, 0.1);
+}
+
+scrollbar-track {
+  background-color: $main-color-light;
+  border-radius: 4px;
+}
+
+scrollbar-thumb {
+  border-radius: 4px;
+  background: $main-color;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: rgba(119, 119, 119, 0.1);
+}
+
+::-webkit-scrollbar-track {
+  background-color: $main-color-light;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: $main-color;
+}
+
+.outer {
+  // position: relative;
+  top: -65px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: $layoutWidth;
+  margin: 0px auto;
+  position: relative;
+  box-sizing: border-box;
+  z-index: 1;
+  
+
+  &:after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+strong {
+  font-weight: 700;
+}
+
+p:empty {
+  // display: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 0 !important;
+}
+
+._js_inViewport {
+  opacity: 0;
+  height: 0;
+  transition: all 400ms ease 100ms;
+}
+.__js_onScreen {
+  opacity: 1;
+  height: inherit;
+}

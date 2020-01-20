@@ -1,0 +1,16 @@
+.main_footer{
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: $main-color-dark;
+
+  &--desc{
+    width: 100%;
+    text-align: center;
+    color: $color-white;
+    font-family: $font-extra;
+    letter-spacing: 1px;
+    padding: 20px 0;
+    font-size: 18px;
+  }
+}
