@@ -675,7 +675,6 @@ p:empty {
     left: 0; }
     @media screen and (max-width: 768px) {
       .header nav {
-        margin-top: 60px;
         margin-right: 0;
         position: absolute;
         width: 100%;
@@ -707,10 +706,9 @@ p:empty {
       transition: max-height 520ms ease;
       background-color: #613965;
       overflow: visible;
-      margin-top: 0px;
+      margin-top: 60px;
       width: 50%;
       right: 0;
-      border-top: 5px solid #5c445f;
       border-bottom-left-radius: 15px;
       border-top-left-radius: 15px; }
       @media (max-height: 650px) {
@@ -1018,7 +1016,7 @@ p:empty {
     height: 100vh; }
     .section-home .home-hello {
       position: absolute;
-      z-index: 2;
+      z-index: 3;
       top: 50%;
       left: 50%;
       font-family: "Amatic SC", cursive; }
