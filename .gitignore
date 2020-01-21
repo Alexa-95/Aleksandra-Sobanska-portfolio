@@ -1,0 +1,11 @@
+.idea/
+node_modules/
+.DS_Store
+images/
+_tmp/
+_mat/
+.png
+.jpg
+.s
+.save
+img/

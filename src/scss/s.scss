@@ -1,0 +1,21 @@
+@import "_reset.scss";
+@import "_vars.scss";
+
+//mixins
+// do rwd
+@mixin max-breakpoint($point) {
+  @media screen and (max-width: $point) {
+    @content;
+  }
+}
+
+@import "_main.scss";
+@import "__owlSlider.scss";
+@import "__header.scss";
+@import "__home.scss";
+@import "__about.scss";
+@import "__experience.scss";
+@import "__skills.scss";
+@import "__projects.scss";
+@import "__contact.scss";
+@import "__footer.scss";

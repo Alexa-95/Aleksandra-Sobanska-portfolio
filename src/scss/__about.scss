@@ -1,0 +1,96 @@
+.section-about{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: fit-content;
+    background-color: $color-bg-light;
+
+    .about_me{
+        position: relative;
+        width: 90%;
+        height: 80%;
+        margin: 10% auto;
+
+        .square_outer{
+            z-index: 0;
+            height: 380px;
+            width: 380px;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            .square_inner{
+                height: 0%;
+                width: 0%;
+                background-color: transparent;
+                border: 2px solid $color-white;
+                transform:  translateX(-50%) translateY(-20%) rotate(45deg);
+                
+                &.square_inViewport{    
+                    height: 100%;
+                    width: 100%;                
+                    animation: squareAppear 1000ms ease-in, squareRotater 800ms ease-in-out 500ms;
+                }
+            }
+
+            @include max-breakpoint($point1){
+                width: 50vw;
+                height: 50vw;
+                top: 12vw;
+            }
+        }
+
+        .about_me--photo{
+            z-index: 1;
+            position: relative;
+            width: fit-content;
+            height: auto;
+            margin: 0 auto;
+
+            img{
+                width: 200px;
+                height: 200px;
+            }
+        }
+        .about_me--text{
+            z-index: 1;
+            position: relative;
+            width: 100%;
+            height: fit-content;
+            padding: 20px;
+            background-color: $color-bg-dark;
+            letter-spacing: 2px;
+            color: $color-white;            
+            font-size: 16px;
+
+            h4{
+                line-height: 32px;
+                font-family: $font-extra;
+            }
+
+            p{
+                line-height: 26px;
+                font-family: $font-article;                
+            }
+        }
+    }
+}
+
+@keyframes squareAppear {
+    0% {
+      height: 0;
+      width: 0;
+    }
+    100% {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+@keyframes squareRotater {
+    0% {
+      transform: translateX(-50%) translateY(-20%) rotate(-45deg);
+    }
+    100% {
+    transform: translateX(-50%) translateY(-20%) rotate(45deg);
+    }
+  }
