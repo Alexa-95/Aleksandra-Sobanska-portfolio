@@ -808,7 +808,7 @@ p:empty {
 
 .header.hideNav {
   right: -100vw;
-  transition: all 1500ms ease; }
+  transition: all 1500ms ease 3s; }
   @media screen and (max-width: 768px) {
     .header.hideNav {
       right: 0; } }
@@ -1202,31 +1202,31 @@ p:empty {
               width: 100%;
               display: block;
               font-size: 16px; } }
-        .section-experience .experience .experience_list .experience-item_employe a {
-          display: -ms-flexbox;
-          display: flex;
-          -ms-flex-direction: column;
-              flex-direction: column;
-          -ms-flex-align: center;
-              align-items: center;
-          -ms-flex-pack: distribute;
-              justify-content: space-around;
-          height: 100%; }
-          .section-experience .experience .experience_list .experience-item_employe a img {
-            height: auto;
-            width: -webkit-fit-content;
-            width: -moz-fit-content;
-            width: fit-content;
-            max-width: 90%; }
-            @media screen and (max-width: 768px) {
-              .section-experience .experience .experience_list .experience-item_employe a img {
-                max-width: 50%; } }
-
-@keyframes experienceAppear {
-  0% {
-    width: 0; }
-  100% {
-    width: 100%; } }
+        .section-experience .experience .experience_list .experience-item_employe {
+          transition: all 0.5s ease;
+          filter: grayscale(1); }
+          .section-experience .experience .experience_list .experience-item_employe:hover {
+            filter: grayscale(0); }
+          .section-experience .experience .experience_list .experience-item_employe a {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: column;
+                flex-direction: column;
+            -ms-flex-align: center;
+                align-items: center;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
+            height: 100%; }
+            .section-experience .experience .experience_list .experience-item_employe a img {
+              height: auto;
+              width: -webkit-fit-content;
+              width: -moz-fit-content;
+              width: fit-content;
+              max-width: 55%; }
+              @media screen and (max-width: 768px) {
+                .section-experience .experience .experience_list .experience-item_employe a img {
+                  max-width: 50%;
+                  margin-bottom: 10px; } }
 
 .section-skills {
   width: 100%;
